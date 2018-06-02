@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="M120Projekt.Artikel_Liste"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:M120Projekt"
+             mc:Ignorable="d" 
+             d:DesignHeight="519" d:DesignWidth="710">
+
+    <Grid>
+        <DataGrid x:Name="artikelListe" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="4,4"  VerticalAlignment="Top" AutoGenerateColumns="False"  MouseDoubleClick="artikelListe_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding ArtikelId}" Header="#ArtikelId" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Bezeichnung}" Header="Bezeichnung" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Lager}" Header="Lager" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Bestand}" Header="Bestand" Width="100"/>
+                <DataGridCheckBoxColumn IsReadOnly="True" Binding="{Binding Lieferbar}" Header="Lieferbar" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Preis}" Header="Preis" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

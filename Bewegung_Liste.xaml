@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="M120Projekt.Bewegung_Liste"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:M120Projekt"
+             mc:Ignorable="d"
+             d:DesignHeight="519" d:DesignWidth="710">
+    <Grid>
+        <DataGrid x:Name="bewegungListe" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="4,4"  VerticalAlignment="Top" AutoGenerateColumns="False" MouseDoubleClick="artikelListe_MouseDoubleClick" >
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding BewegungId}" Header="#BewegungId" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Firma}" Header="Firma" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Datum}" Header="Datum" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Menge}" Header="Menge" Width="100"/>
+                <DataGridCheckBoxColumn IsReadOnly="True" Binding="{Binding Verrechenbar}" Header="Verrechenbar" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Artikel}" Header="Artikel" Width="100"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Gesamtpreis}" Header="Gesamtpreis" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
